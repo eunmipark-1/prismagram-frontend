@@ -1,1 +1,1 @@
-This Project is Prismagram Front-end 
+This Project is for Prismagram Front-end.
