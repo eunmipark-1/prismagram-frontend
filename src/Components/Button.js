@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Container = style.button`
+const Container = styled.button`
   width:100%;
   border:0;
   border-radius:${props => props.theme.borderRadius};
@@ -14,7 +14,7 @@ const Container = style.button`
   font-size:14px;
 `;
 
-const Button = ({text}) =>> <Container>{text}</Container>;
+const Button = ({text}) => <Container>{text}</Container>;
 
 Button.propTypes = {
   text:PropTypes.string.isRequired
