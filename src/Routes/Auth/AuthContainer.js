@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import AuthPresenter from "./AuthPresenter";
 import useInput from "../../Hooks/useInput";
-import {useMutaion} from "react-apollo-hooks";
+import { useMutation } from "react-apollo-hooks";
 import {LOG_IN} from "./AuthQueries";
 
 export default () => {
@@ -10,7 +10,7 @@ export default () => {
   const firstName = useInput("");
   const lastName = useInput("");
   const email = useInput("");
-  const requestSecret = useMutaion(LOG_IN, {
+  const requestSecret = useMutation(LOG_IN, {
     variables : {email:email.value}
   });
 

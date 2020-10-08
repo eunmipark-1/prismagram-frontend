@@ -48,14 +48,13 @@ const Form = styled(Box)`
 export default ({
   action,
   username,
+
   firstName,
   lastName,
   email,
   setAction,
   onLogin
-}) => {
-  
-  return (
+}) => (
     <Wrapper>
       <Form>
         {action === "logIn" ? (
@@ -69,7 +68,6 @@ export default ({
             <Input placeholder={"Last name"} {...lastName}/>
             <Input placeholder={"Email"} {...email} type="email"/>
             <Input placeholder={"Username"} {...username}/>
-            <Input placeholder={"Password"} {...password} type="password"/>
             <Button text={"Sign up"} />
           </form>
         )}
@@ -89,3 +87,4 @@ export default ({
         )}
       </StateChanger>
     </Wrapper>
+  );
