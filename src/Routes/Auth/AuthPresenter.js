@@ -47,27 +47,26 @@ const Form = styled(Box)`
 `;
 export default ({
   action,
-  username,
-
+  userName,
   firstName,
-  lastName,
+  lastname,
   email,
   setAction,
-  onLogin
+  onSubmit
 }) => (
     <Wrapper>
       <Form>
         {action === "logIn" ? (
-          <form onSubmit = {onLogin}>
+          <form onSubmit={onSubmit}>
             <Input placeholder={"Email"} {...email}  type="email"/>
             <Button text={"Log in"} />
           </form>
         ) : (
-          <form onSubmit={onLogin}> 
+          <form onSubmit={onSubmit}> 
             <Input placeholder={"Fist name"} {...firstName}/>
-            <Input placeholder={"Last name"} {...lastName}/>
+            <Input placeholder={"Last name"} {...lastname}/>
             <Input placeholder={"Email"} {...email} type="email"/>
-            <Input placeholder={"Username"} {...username}/>
+            <Input placeholder={"Username"} {...userName}/>
             <Button text={"Sign up"} />
           </form>
         )}
