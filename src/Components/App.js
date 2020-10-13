@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Theme from "../Styles/Theme";
 import Router from "./Router";
 import Footer from "./Footer";
+
 const QUERY = gql`
   { isLoggedIn @client }
 `;
