@@ -73,13 +73,15 @@ export default ({
           </form>
         )}
         {action === "confirm" && (
-          <form onSubmit = {onSubmit}>
+          <form onSubmit={onSubmit}>
             <Input placeholder="Past your secret" required {...secret} />
             <Button text={"Confirm"} />
           </form>
         )}
       </Form>
-      <StateChanger>
+      
+      {action !== "confirm" && (
+        <StateChanger>
         {action === "logIn" ? (
           <>
             Don't have an account?{" "}
@@ -92,5 +94,6 @@ export default ({
           </>
         )}
       </StateChanger>
+      )}
     </Wrapper>
   );
