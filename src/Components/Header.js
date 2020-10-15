@@ -69,10 +69,13 @@ const ME = gql`
   }
 `;
 
+
 export default withRouter(({history}) => {
   const search = useInput("");
-  const meQuery = useQuery(ME);
-  console.log(meQuery);
+  const { data } = useQuery(ME);   
+  if(data !== undefined){
+    console.log(data.me);
+  }
   const onSearchSubmit = e => {
     e.preventDefault();
     history.push(`/search?term=${search.value}`);
@@ -98,9 +101,18 @@ export default withRouter(({history}) => {
            <HeaderLink to="/notifications">
             <HeartEmpty />
           </HeaderLink>
-           <HeaderLink to="/userName">
-            <User />
-          </HeaderLink>
+          {!(data !== undefined && data.me) ? (         
+             <HeaderLink to="/#">
+              <User />
+            </HeaderLink>
+          ) : (
+             <HeaderLink to={data.me.userName}>
+              <User />
+            </HeaderLink>
+          )}
+           
+        
+          
         </HeaderColumn>
       </HeaderWrapper>
     </Header>
