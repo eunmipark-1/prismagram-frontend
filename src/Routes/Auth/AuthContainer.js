@@ -34,7 +34,7 @@ export default () => {
     }
   });
 
-  const localLogInMutation = useMutation(LOCAL_LOG_IN);
+  const [localLogInMutation] = useMutation(LOCAL_LOG_IN);
 
   const onSubmit = async(e) => {
     e.preventDefault();

@@ -17,7 +17,8 @@ const Input = ({
   required = true,
   value,
   onChange,
-  type ="text"
+  type ="text",
+  className
 }) => (
   <Container 
     placeholder={placeholder} 
@@ -25,6 +26,7 @@ const Input = ({
     value={value}
     onChange={onChange}
     type= {type}
+    className = {className}
   />)
 
 Input.propTypes = {
