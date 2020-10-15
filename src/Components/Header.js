@@ -73,9 +73,9 @@ const ME = gql`
 export default withRouter(({history}) => {
   const search = useInput("");
   const { data } = useQuery(ME);   
-  if(data !== undefined){
-    console.log(data.me);
-  }
+  // if(data !== undefined){
+  //   console.log(data.me);
+  // }
   const onSearchSubmit = e => {
     e.preventDefault();
     history.push(`/search?term=${search.value}`);
