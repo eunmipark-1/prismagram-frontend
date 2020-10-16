@@ -5,7 +5,7 @@ import Avatar from "../Avatar";
 import {HeartFull, HeartEmpty, Comment} from "../Icons";
 
 const Post = styled.div`
-  backgrund: ${props => props.theme.whiteBox};
+  ${props => props.theme.whiteBox};
   width:100%;
   max-width:600px;
   margin-bottom:25px;

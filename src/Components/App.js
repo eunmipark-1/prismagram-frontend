@@ -33,6 +33,7 @@ export default () => {
         <Router>
           <>
             <Header />
+            {isLoggedIn && <Header />}
             <Wrapper>
               <Routes isLoggedIn={isLoggedIn} />
               <Footer />
